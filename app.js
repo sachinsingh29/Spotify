@@ -114,7 +114,7 @@ async function displayAlbum() {
   //console.log(tempDiv);
 
   // Extract information from the directory listing
-  let links = tempDiv.querySelectorAll('#files a:not([title=".."])');
+  let links = tempDiv.querySelectorAll('#files a');
 
   let folder = Array.from(links).map((link) => {
     const url = link.getAttribute("href").split("/").slice(-1)[0];
