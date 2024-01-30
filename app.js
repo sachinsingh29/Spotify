@@ -113,7 +113,13 @@ async function displayAlbum() {
   console.log(url);
   let response = await fetch(url);
   let htmlContent = await response.text();
+  
+  if (!response.ok) {
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
+  
   console.log(htmlContent);
+  
   let tempDiv = document.createElement("div");
   tempDiv.innerHTML = htmlContent;
   console.log(tempDiv);
