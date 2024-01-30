@@ -112,7 +112,7 @@ async function displayAlbum() {
   let tempDiv = document.createElement("div");
   tempDiv.innerHTML = htmlContent;
   //console.log(tempDiv);
-
+if (tempDiv.innerHTML.trim() !== "") {
   // Extract information from the directory listing
   let links = tempDiv.querySelectorAll('#files a:not([title=".."])');
 
@@ -159,6 +159,9 @@ async function displayAlbum() {
       await getSongs(`songs/${item.currentTarget.dataset.folder}`);
     });
   });
+}else{
+  console.log("HTML content is empty");
+}
 }
 
 async function main() {
