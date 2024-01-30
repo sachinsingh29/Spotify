@@ -46,9 +46,7 @@ let currentSong = new Audio();
 async function getSongs(folder) {
   currentfolder = folder;
   songs = [];
-  let urlextract = `https://sachinsingh29.github.io/Spotify/${folder}/song.json`;
-  let url = urlextract.split("/").slice("-3").join("/");
-  //console.log(url);
+  let url = `/${folder}/song.json`;
   let data = await fetch(url);
   let response = await data.json();
   //console.log(response);
@@ -106,7 +104,7 @@ const playMusic = (track, pause = false) => {
 
 //function for displaying album dynmic
 async function displayAlbum() {
-  let response = await fetch("/Spotify/songs/");
+  let response = await fetch("Spotify/songs/");
   let htmlContent = await response.text();
 
   let tempDiv = document.createElement("div");
