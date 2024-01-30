@@ -117,7 +117,7 @@ async function displayAlbum() {
   let links = tempDiv.querySelectorAll('#files a');
 
   let folder = Array.from(links).map((link) => {
-    const url = link.getAttribute("href").split("/").slice(-1)[0];
+    const url = "songs/"+link.getAttribute("href").split("/").slice(-1)[0];
     const folderTitle =
       link.getAttribute("title").toUpperCase() || "Unknown Title";
     
@@ -129,10 +129,10 @@ async function displayAlbum() {
       url,
       folderTitle,
     };
-    console.log(folder);
+    
   });
 
-  
+  console.log(folder);
   //console.log(links)
 
   // Creating album card
