@@ -120,7 +120,7 @@ async function displayAlbum() {
     const url = link.getAttribute("href").split("/").slice(-1)[0];
     const folderTitle =
       link.getAttribute("title").toUpperCase() || "Unknown Title";
-      console.log("sachin)
+      console.log("sachin);
      console.log("URL:", url);
     console.log("Folder Title:", folderTitle);
 
