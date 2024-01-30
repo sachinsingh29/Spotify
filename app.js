@@ -121,8 +121,8 @@ async function displayAlbum() {
     const folderTitle =
       link.getAttribute("title").toUpperCase() || "Unknown Title";
 
-    // console.log("URL:", url);
-    //console.log("Folder Title:", folderTitle);
+     console.log("URL:", url);
+    console.log("Folder Title:", folderTitle);
 
     return {
       //name: link.querySelector('.name').textContent,
