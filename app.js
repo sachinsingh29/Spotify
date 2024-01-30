@@ -104,7 +104,7 @@ const playMusic = (track, pause = false) => {
 
 //function for displaying album dynmic
 async function displayAlbum() {
-  let response = await fetch("Spotify/songs/");
+  let response = await fetch("songs/");
   let htmlContent = await response.text();
 
   let tempDiv = document.createElement("div");
@@ -112,7 +112,7 @@ async function displayAlbum() {
   console.log(tempDiv);
 if (tempDiv.innerHTML.trim() !== "") {
   // Extract information from the directory listing
-  let links = tempDiv.querySelectorAll('#files a:not([title=".."])');
+  let links = tempDiv.querySelectorAll('#files p:not([title=".."])');
 
   let folder = Array.from(links).map((link) => {
     const url = link.getAttribute("href").split("/").slice(-1)[0];
