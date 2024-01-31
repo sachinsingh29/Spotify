@@ -108,7 +108,7 @@ const playMusic = (track, pause = false) => {
 async function displayAlbum() {
   let urlextr = "songs/";
   let url = urlextr;
-  console.log(url);
+  //console.log(url);
   let response = await fetch(url);
   let htmlContent = await response.text();
   
