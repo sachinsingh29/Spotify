@@ -1,0 +1,20 @@
+{
+  "info": [
+    {
+      "title": "Love",
+      "Path": "songs/Love"
+    },
+    {
+      "title": "sad",
+      "Path": "songs/sad"
+    },
+    {
+      "title": "Remix",
+      "Path": "songs/Remix"
+    },
+    {
+      "title": "topsong",
+      "Path": "songs/topsong"
+    }
+  ]
+}
