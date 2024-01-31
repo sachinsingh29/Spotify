@@ -106,9 +106,7 @@ const playMusic = (track, pause = false) => {
 
 //function for displaying album dynmic
 async function displayAlbum() {
-  let urlextr = "https://sachinsingh29.github.io/Spotify/songs/Love"
-    .split("/")
-    .slice(-2).join("/);
+  let urlextr = "songs/";
   let url = urlextr;
   console.log(url);
   let response = await fetch(url);
