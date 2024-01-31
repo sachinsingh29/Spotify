@@ -142,6 +142,7 @@ async function displayAlbum() {
     e.addEventListener("click", async (item) => {
       //console.log(item, item.currentTarget.dataset);
       await getSongs(`songs/${item.currentTarget.dataset.folder}`);
+      left.style.left = "0";
     });
   });
 }
@@ -191,7 +192,7 @@ async function main() {
   document
     .querySelector(".control-option")
     .getElementsByTagName("input")[0]
-    .addEventListener("mouseover", (e) => {
+    .addEventListener("click", (e) => {
       //console.log(e.target, e.target.value);
       currentSong.volume = parseInt(e.target.value) / 100;
     });
